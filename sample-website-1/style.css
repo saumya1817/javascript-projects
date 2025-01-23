@@ -2,10 +2,192 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gilroy';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 html, body {
     height: 100%;
     width: 100%;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+    h4{
+        padding: 10px 20px;
+        border: 1px solid rgb(184, 183, 183);
+        border-radius: 50px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.808);
+        font-size: 18px;
+        position: relative;
+        overflow: hidden;
+        transition: all ease 0.4s;
+
+        a{
+            text-decoration: none;
+            color: #000000bb;
+            position: relative;
+            z-index: 9;
+        }
+    }
+}
+.nav-part2 h4::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+.nav-part2 h4:hover a{
+    color: white;
+}
+#center{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.4vw;
+    line-height: 2vw;
+}
+#center h1{
+    font-size: 8vw;
+    text-align: right;
+    line-height: 8vw;
+}
+#page1 video{
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+}
+#bg-animation{
+    width: 36vw;
+    height: 36vw;
+    position: absolute;
+    right: 0;
+    top: 70vh;
+}
+#bg-animation #anime1{
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+#bg-animation #anime2{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A, #FE570A);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: animation2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#bg-animation #anime3{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A, #FE570A);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: animation1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+}
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: movingScrollbar;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+#moving-text #circle{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 3vw;
+}
+
+@keyframes animation1 {
+    from{
+        transform: translate(55%, -3%);
+    }
+    to{
+        transform: translate(0%, 10%);
+    }
+}
+@keyframes animation2 {
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-20%, 30%);
+    }
+}
+@keyframes movingScrollbar {
+    from{
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(-100%)
+    }
 }
