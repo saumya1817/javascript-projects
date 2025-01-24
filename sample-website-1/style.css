@@ -138,6 +138,7 @@ nav{
     width: 100%;
     background-color: #EFEAE3;
     padding: 8vw 0;
+    position: relative;
 }
 #moving-text{
     overflow-x: auto;
@@ -166,7 +167,88 @@ nav{
     display: inline-block;
     margin: 1vw 3vw;
 }
+#page2-bottom{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw;
+    position: relative;
+    z-index: 9;
 
+    h1{
+        font-size: 3.5vw;
+        width: 60%;
+        line-height: 3.8vw;
+    }
+}
+#bottom-part2{
+    width: 23%;
+    margin-top: 20vw;
+    margin-right: 5vw;
+
+    img{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    p{
+        font-weight: 100;
+        margin-top: 2vw;
+        font-size: 1vw;
+    }
+}
+#circle-animation{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background: linear-gradient(to top right,#FF2D03, #FF671B);
+    border-radius: 50%;
+    top: 60%;
+    left: 25%;
+    filter: blur(20px);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+    animation-name: movingcircle;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+.elem{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #0000003c;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+    cursor: pointer;
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
 @keyframes animation1 {
     from{
         transform: translate(55%, -3%);
@@ -177,9 +259,11 @@ nav{
 }
 @keyframes animation2 {
     from{
+        filter: blur(20px);
         transform: translate(5%, -5%);
     }
     to{
+        filter: blur(30px);
         transform: translate(-20%, 30%);
     }
 }
@@ -189,5 +273,13 @@ nav{
     }
     to{
         transform: translateX(-100%)
+    }
+}
+@keyframes movingcircle {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        transform: translate(-10%, 10%) skew(-12deg);
     }
 }
