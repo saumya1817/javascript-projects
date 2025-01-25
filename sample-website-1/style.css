@@ -8,6 +8,7 @@
 html, body {
     height: 100%;
     width: 100%;
+    background-color: #EFEAE3;
 }
 #page1{
     min-height: 100vh;
@@ -215,10 +216,27 @@ nav{
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+#featured_heading{
+    height: 2vw;
+    width: 100%;
+    background-color: #EFEAE3;
+    /* margin-left: 2vw; */
+    /* margin-top: 2vw; */
+    display: flex;
+    justify-content: left;
+    padding-left: 2vw;
+}
+#featured_circle{
+    height: 0.5vw;
+    width: 0.5vw;
+    border-radius: 50%;
+    background-color: #FE320A;
+    margin-right: 0.6vw;
+    margin-top: 0.3vw;
+}
 #page3{
     min-height: 100vh;
     width: 100%;
-    background-color: #EFEAE3;
     padding: 4vw 0;
 }
 .elem{
@@ -248,6 +266,54 @@ nav{
 }
 .elem:hover .overlay{
     top: 0;
+}
+#fixed-image{
+    height: 30vw;
+    width: 24vw;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 20%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
+#section1{
+    height: 10vw;
+    width: 100%;
+    position: relative;
+}
+#sub_section{
+    position: absolute;
+    height: 5vw;
+    width: 100%;
+    margin-left: 3vw;
+    margin-top: 3vw;
+    text-align: center;
+
+    h3{
+        padding-top: 0.6vw;
+        font-weight: 200;
+        height: 3vw;
+        width: 10vw;
+        border: 1px solid rgba(0, 0, 0, 0.467);
+        border-radius: 2vw;
+        cursor: pointer;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+#sub_section h3:hover{
+    background-color: black;
+    transition: all ease 0.4s;
+
+    a{
+        color: white;
+    }
 }
 @keyframes animation1 {
     from{
