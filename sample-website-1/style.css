@@ -292,8 +292,8 @@ nav{
     margin-top: 3vw;
     text-align: center;
 
-    h3{
-        padding-top: 0.6vw;
+    h4{
+        padding-top: 0.8vw;
         font-weight: 200;
         height: 3vw;
         width: 10vw;
@@ -305,15 +305,72 @@ nav{
     a{
         text-decoration: none;
         color: black;
+        letter-spacing: 0.1px;
     }
 }
-#sub_section h3:hover{
+#sub_section h4:hover{
     background-color: black;
     transition: all ease 0.4s;
 
     a{
         color: white;
     }
+}
+#section2{
+    height: 60vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    #container_section2{
+        height: 55vw;
+        width: 95%;
+        margin: 2vw;
+        background-color: black;
+        border-radius: 2vw;
+        display: flex;
+        justify-content: center;
+    }
+}
+#container_section2 #sub_section1{
+    border-radius: 2vw;    
+    height: 55vw;
+    width: 50%;
+    position: relative;
+
+    #tabs{
+        position: absolute;
+        top:25%;
+        left: 20%;
+        border-left: 2px solid rgb(80, 74, 69);
+
+        h2{
+            font-size: 3em;
+            cursor: pointer;
+            padding-bottom: 2px;
+        }
+    }
+}
+/* #Design{
+    color: white;
+}
+#Project, #Execution{
+    color: rgb(80, 74, 69);
+    padding-left: 10px;
+} */
+#text{
+    font-size: 0.85em;
+    width: 60%;
+    position: absolute;
+    top:51%;
+    left: 20%;
+    color: white;
+}
+#container_section2 #sub_section2{
+    border-radius: 2vw;
+    background-color: yellow;
+    height: 55vw;
+    width: 50%;
 }
 @keyframes animation1 {
     from{
