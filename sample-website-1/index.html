@@ -186,6 +186,50 @@
         <div id="sub_section2"></div>
       </div>
     </div>
+
+    <div id="page4">
+
+    </div>
+
+    <div id="page5">
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div id="footer_div">
+      <div id="footer_animation"></div>
+      <div id="footer_animation1"></div>
+      <div id="footer_animation2"></div>
+      <div id="footer_tags">
+        <h3>Work</h3>
+        <h3>Studio</h3>
+        <h3>Contact</h3>
+      </div>
+      <div id="footer_email">
+        Get industry insights and creative inspiration straight to your inbox.
+      </div>
+    </div>
+    <div id="footer_heading">
+      <h1>
+        Sundown
+      </h1>
+    </div>
+    <div id="footerlower">      
+      <div>
+          <h5>Copyright © Sundown Studio</h5>
+      </div>
+      <div>
+        <h5>Brooklyn, NY</h5>
+      </div>
+      <div>
+        <h5>Instagram</h5>
+      </div>
+      <div>
+        <h5>LinkedIn</h5>
+      </div>
+  </div>
   </div>
 
 
@@ -235,6 +279,7 @@
     var Project = document.querySelector("#Project");
     var Execution = document.querySelector("#Execution");
     var text = document.querySelector("#sub_section1 #text");
+    var sub_section2 = document.querySelector("#sub_section2");
 
     document.addEventListener("DOMContentLoaded", function () {
       var section2 = document.querySelector('#section2');
@@ -248,6 +293,7 @@
       text.querySelector('p').innerText = `Our team works with our clients to refine an idea and concept into an executable design. We
         create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design
         solutions from concept, design, and architectural drawings to 3D renderings.`;
+      sub_section2.style.backgroundImage = `url(https://sundown-ivory.vercel.app/page4-1.webp)`;
     });
 
     Design.addEventListener("click", function () {
@@ -258,9 +304,8 @@
       Project.style.paddingLeft = "20px";
       Execution.style.color = "rgb(80, 74, 69)";
       Execution.style.paddingLeft = "20px";
-      text.querySelector('p').innerText = `Our team works with our clients to refine an idea and concept into an executable design. We
-        create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design
-        solutions from concept, design, and architectural drawings to 3D renderings.`;
+      sub_section2.style.backgroundImage = `url(https://sundown-ivory.vercel.app/page4-1.webp)`;
+      text.querySelector('p').innerText = `Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings.`;
     });
 
     Project.addEventListener("click", function () {
@@ -271,6 +316,7 @@
       Project.style.color = "white";
       Execution.style.color = "rgb(80, 74, 69)";
       Execution.style.paddingLeft = "20px";
+      sub_section2.style.backgroundImage = `url(https://sundown-ivory.vercel.app/page4-2.webp)`;
       text.querySelector('p').innerText = `Once we have a design, our production team takes the lead in bringing it to life. We manage all stages of the project, from build specifications and technical drawings to site surveys, vendor management, and 2D & 3D production. We have an extensive network of partners to meet each unique design and project need.`;
     });
 
@@ -282,6 +328,7 @@
       Execution.style.color = "white";
       Execution.style.paddingLeft = "0px";
       Execution.style.fontSize = "3.5em";
+      sub_section2.style.backgroundImage = `url(https://sundown-ivory.vercel.app/page4-3.webp)`;
       text.querySelector('p').innerText = `We’re with you every step of the way, from the project initiation to launch day. Our production and design teams are onsite to direct and guide the process down to the last point of completion, ensuring success across the built space and experience.`;
     });
 

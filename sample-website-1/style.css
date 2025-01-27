@@ -5,19 +5,25 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: #EFEAE3;
 }
-#page1{
+#main{
+    position: relative;
+    z-index: 100;
+}
+#page1 {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
     position: relative;
     padding: 0 2vw;
 }
-nav{
+
+nav {
     padding: 2vw 0vw;
     width: 100%;
 
@@ -25,12 +31,13 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-.nav-part2{
+
+.nav-part2 {
     display: flex;
     align-items: center;
     gap: 1vw;
 
-    h4{
+    h4 {
         padding: 10px 20px;
         border: 1px solid rgb(184, 183, 183);
         border-radius: 50px;
@@ -41,7 +48,7 @@ nav{
         overflow: hidden;
         transition: all ease 0.4s;
 
-        a{
+        a {
             text-decoration: none;
             color: #000000bb;
             position: relative;
@@ -49,7 +56,8 @@ nav{
         }
     }
 }
-.nav-part2 h4::after{
+
+.nav-part2 h4::after {
     position: absolute;
     content: "";
     height: 100%;
@@ -60,14 +68,17 @@ nav{
     border-radius: 50%;
     transition: all ease 0.4s;
 }
-.nav-part2 h4:hover::after{
+
+.nav-part2 h4:hover::after {
     bottom: 0;
     border-radius: 0;
 }
-.nav-part2 h4:hover a{
+
+.nav-part2 h4:hover a {
     color: white;
 }
-#center{
+
+#center {
     height: 65vh;
     width: 100%;
     display: flex;
@@ -76,30 +87,35 @@ nav{
     border-bottom: 1px solid #0000003c;
     padding-bottom: 2.5vw;
 }
-#left h3{
+
+#left h3 {
     width: 25vw;
     font-size: 1.4vw;
     line-height: 2vw;
 }
-#center h1{
+
+#center h1 {
     font-size: 8vw;
     text-align: right;
     line-height: 8vw;
 }
-#page1 video{
+
+#page1 video {
     position: relative;
     width: 100%;
     border-radius: 30px;
     margin-top: 4vw;
 }
-#bg-animation{
+
+#bg-animation {
     width: 36vw;
     height: 36vw;
     position: absolute;
     right: 0;
     top: 70vh;
 }
-#bg-animation #anime1{
+
+#bg-animation #anime1 {
     height: 100%;
     width: 100%;
     background-color: #FE320A;
@@ -108,7 +124,8 @@ nav{
     filter: blur(20px);
     position: absolute;
 }
-#bg-animation #anime2{
+
+#bg-animation #anime2 {
     height: 30vw;
     width: 30vw;
     background: linear-gradient(#FE320A, #FE570A);
@@ -121,7 +138,8 @@ nav{
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-#bg-animation #anime3{
+
+#bg-animation #anime3 {
     height: 30vw;
     width: 30vw;
     background: linear-gradient(#FE320A, #FE570A);
@@ -134,21 +152,25 @@ nav{
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-#page2{
+
+#page2 {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
     padding: 8vw 0;
     position: relative;
 }
-#moving-text{
+
+#moving-text {
     overflow-x: auto;
     white-space: nowrap;
 }
-#moving-text::-webkit-scrollbar{
+
+#moving-text::-webkit-scrollbar {
     display: none;
 }
-.con{
+
+.con {
     white-space: nowrap;
     display: inline-block;
     animation-name: movingScrollbar;
@@ -156,11 +178,13 @@ nav{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-#moving-text h1{
+
+#moving-text h1 {
     font-size: 9vw;
     display: inline-block;
 }
-#moving-text #circle{
+
+#moving-text #circle {
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -168,7 +192,8 @@ nav{
     display: inline-block;
     margin: 1vw 3vw;
 }
-#page2-bottom{
+
+#page2-bottom {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -178,33 +203,35 @@ nav{
     position: relative;
     z-index: 9;
 
-    h1{
+    h1 {
         font-size: 3.5vw;
         width: 60%;
         line-height: 3.8vw;
     }
 }
-#bottom-part2{
+
+#bottom-part2 {
     width: 23%;
     margin-top: 20vw;
     margin-right: 5vw;
 
-    img{
+    img {
         width: 100%;
         border-radius: 15px;
     }
 
-    p{
+    p {
         font-weight: 100;
         margin-top: 2vw;
         font-size: 1vw;
     }
 }
-#circle-animation{
+
+#circle-animation {
     height: 30vw;
     width: 30vw;
     position: absolute;
-    background: linear-gradient(to top right,#FF2D03, #FF671B);
+    background: linear-gradient(to top right, #FF2D03, #FF671B);
     border-radius: 50%;
     top: 60%;
     left: 25%;
@@ -216,7 +243,8 @@ nav{
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-#featured_heading{
+
+#featured_heading {
     height: 2vw;
     width: 100%;
     background-color: #EFEAE3;
@@ -226,7 +254,8 @@ nav{
     justify-content: left;
     padding-left: 2vw;
 }
-#featured_circle{
+
+#featured_circle {
     height: 0.5vw;
     width: 0.5vw;
     border-radius: 50%;
@@ -234,12 +263,15 @@ nav{
     margin-right: 0.6vw;
     margin-top: 0.3vw;
 }
-#page3{
+
+#page3 {
     min-height: 100vh;
     width: 100%;
     padding: 4vw 0;
+    background-color: #EFEAE3;
 }
-.elem{
+
+.elem {
     height: 150px;
     width: 100%;
     border-bottom: 1px solid #0000003c;
@@ -250,12 +282,14 @@ nav{
     overflow: hidden;
     cursor: pointer;
 }
-.elem h2{
+
+.elem h2 {
     font-size: 3vw;
     position: relative;
     z-index: 9;
 }
-.elem .overlay{
+
+.elem .overlay {
     height: 100%;
     width: 100%;
     background-color: orange;
@@ -264,10 +298,12 @@ nav{
     top: -100%;
     transition: all ease 0.3s;
 }
-.elem:hover .overlay{
+
+.elem:hover .overlay {
     top: 0;
 }
-#fixed-image{
+
+#fixed-image {
     height: 30vw;
     width: 24vw;
     border-radius: 10px;
@@ -279,12 +315,15 @@ nav{
     background-position: center;
     background-size: cover;
 }
-#section1{
+
+#section1 {
     height: 10vw;
     width: 100%;
     position: relative;
+    background-color: #EFEAE3;
 }
-#sub_section{
+
+#sub_section {
     position: absolute;
     height: 5vw;
     width: 100%;
@@ -292,7 +331,7 @@ nav{
     margin-top: 3vw;
     text-align: center;
 
-    h4{
+    h4 {
         padding-top: 0.8vw;
         font-weight: 200;
         height: 3vw;
@@ -302,27 +341,30 @@ nav{
         cursor: pointer;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: black;
         letter-spacing: 0.1px;
     }
 }
-#sub_section h4:hover{
+
+#sub_section h4:hover {
     background-color: black;
     transition: all ease 0.4s;
 
-    a{
+    a {
         color: white;
     }
 }
-#section2{
+
+#section2 {
     height: 60vw;
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #EFEAE3;
 
-    #container_section2{
+    #container_section2 {
         height: 55vw;
         width: 95%;
         margin: 2vw;
@@ -332,77 +374,199 @@ nav{
         justify-content: center;
     }
 }
-#container_section2 #sub_section1{
-    border-radius: 2vw;    
+
+#container_section2 #sub_section1 {
+    border-radius: 2vw;
     height: 55vw;
     width: 50%;
     position: relative;
 
-    #tabs{
+    #tabs {
         position: absolute;
-        top:25%;
+        top: 25%;
         left: 20%;
         border-left: 2px solid rgb(80, 74, 69);
 
-        h2{
+        h2 {
             font-size: 3em;
             cursor: pointer;
             padding-bottom: 2px;
         }
     }
 }
-/* #Design{
-    color: white;
-}
-#Project, #Execution{
-    color: rgb(80, 74, 69);
-    padding-left: 10px;
-} */
-#text{
+
+#text {
     font-size: 0.85em;
     width: 60%;
     position: absolute;
-    top:51%;
+    top: 51%;
     left: 20%;
     color: white;
 }
-#container_section2 #sub_section2{
+
+#container_section2 #sub_section2 {
     border-radius: 2vw;
-    background-color: yellow;
     height: 55vw;
     width: 50%;
 }
-@keyframes animation1 {
+#page4{
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+}
+#footer{    
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    bottom: 0;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+    #footer_heading{
+        border-bottom: 2px solid rgb(80, 74, 69);
+        /* padding-top: 2em; */
+        padding-left: 2em;
+
+        h1{
+            font-size: 20vw;
+        }
+    }
+}
+#footer_div{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+#footer_div #footer_tags{
+    height: 40vh;
+    width: 30%;
+    margin-left: 4em;
+    margin-top: 3em;
+    line-height: 1.5em;
+    font-size: 2em;
+    position: absolute;
+    z-index: 99;
+
+    h3{
+        cursor: pointer;
+    }
+}
+#footer_div #footer_email{
+    height: 40vh;
+    width: 20%;
+    margin-left: 65em;
+    margin-top: 6em;
+    position: relative;
+    position: absolute;
+    z-index: 99;
+}
+#footer_animation{
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    background-color: #fe330a;
+    filter: blur(50px);
+}
+#footer_div #footer_animation1{
+    height: 35vh;
+    width: 50%;
+    z-index: 90;
+    position: absolute;
+    background-color: #fe330a;
+    filter: blur(50px);
+    animation-name: footer_animation1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#footer_div #footer_animation2{
+    height: 30vh;
+    width: 100%;
+    z-index: 90;
+    margin-left: 30%;
+    position: absolute;
+    background-color: #fe330a;
+    filter: blur(50px);
+    animation-name: footer_animation2;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#footer #footerlower{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+
+    h5{
+        padding: 2em;
+    }
+}
+@keyframes footer_animation1 {
     from{
-        transform: translate(55%, -3%);
+        transform: rotate(-10deg);
     }
     to{
+        transform: rotate(-20deg);
+    }
+}
+@keyframes footer_animation2 {
+    from{
+        transform: rotate(30deg);
+    }
+    to{
+        transform: rotate(35deg);
+    }
+}
+@keyframes animation1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
         transform: translate(0%, 10%);
     }
 }
+
 @keyframes animation2 {
-    from{
+    from {
         filter: blur(20px);
         transform: translate(5%, -5%);
     }
-    to{
+
+    to {
         filter: blur(30px);
         transform: translate(-20%, 30%);
     }
 }
+
 @keyframes movingScrollbar {
-    from{
+    from {
         transform: translateX(0)
     }
-    to{
+
+    to {
         transform: translateX(-100%)
     }
 }
+
 @keyframes movingcircle {
-    from{
+    from {
         transform: translate(10%, -10%) skew(0);
     }
-    to{
+
+    to {
         transform: translate(-10%, 10%) skew(-12deg);
     }
 }
