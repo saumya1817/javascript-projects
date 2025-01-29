@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+    width: 100%;
+    min-height: 150vh;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.text{
+    height: 50vh;
+    width: 30vw;
+    position: absolute;
+    margin-top: 30vh;
+    margin-left: 35%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.cards{
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
+}
+#card-one{
+    top: 130%;
+    background-image: url('../scrolling-effect-1/ONE.png');
+}
+#card-two{
+    top: 230%;
+    background-image: url('../scrolling-effect-1/TWO.png');
+}
+#card-three{
+    top: 250%;
+    background-image: url('../scrolling-effect-1/THREE.png');
+}

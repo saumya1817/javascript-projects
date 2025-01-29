@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Scrolling Effect 1</title>
+    <link rel="shortcut icon" href="../../../Users/yash vaidya/javascript-projects/sample-website-1/favicon.ico"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div id="main">
+        <div class="text">
+            <div class="text-img"></div>
+            <h1>Practice new features with <br> SAUMYA </h1><br>
+            <p>An exploration of animation techniques through the power of HTML, CSS, and GASP JS—this project is all
+                about learning how to make websites move with style.</p>
+        </div>
+        <div class="cards" id="card-one"></div>
+        <div class="cards" id="card-two"></div>
+        <div class="cards" id="card-three"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#main",
+                //markers: true, // shows markers on screen - used during development
+                start: "38% 50%", // calculate start of scroll
+                end: "100% 50%",// calculate end of scroll
+                scrub: 2, // effect to work on both scroll up & down
+                pin: true // for pin effect in cards
+            }
+        })
+
+        tl
+            .to(".text", {
+                top: "-7%",
+            }, 'a')
+            .to("#card-one", {
+                top: "35%",
+            }, 'a')
+            .to("#card-two", {
+                top: "130%"
+            }, 'a')
+            .to("#card-two", {
+                top: "42%"
+            }, 'b')
+            .to("#card-one", {
+                width: "65%",
+                height: "65vh"
+            }, 'b')
+            .to("#card-three", {
+                top: "130%"
+            }, 'b')
+            .to("#card-three", {
+                top: "50%"
+            }, 'c')
+            .to("#card-two", {
+                width: "70%",
+                height: "70vh"
+            }, 'c')
+    </script>
+
+</body>
+
+</html>
