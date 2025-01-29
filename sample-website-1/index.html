@@ -8,6 +8,7 @@
   <title>Sample Website 1</title>
   <link rel="shortcut icon" href="../../../Users/yash vaidya/javascript-projects/sample-website-1/favicon.ico"
     type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -188,7 +189,74 @@
     </div>
 
     <div id="page4">
+      <div class="click-effect"></div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper" style="padding-bottom: 5vw;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="width: 30%;">
+            <div id="swiper_data">
+              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15ff_Nike.svg" alt="Nike Logo">
+              <p style="margin-right: 4em;">
+                Retained Production support across retail and events in NY, CHI, LA. Creative Design, Design Management, Production/Project Management, and execution of work from concept to installation across the Country.
+              </p>
+            </div>
+          </div>
 
+          <div class="swiper-slide" style="width: 30%;">
+            <div id="swiper_data">
+              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1600_Converse.svg" alt="">
+              <p style="margin-right: 4em;">
+                Creative Concepting, Design, Design Management, Project Management, and execution of work from concept to installation across the Country. Cross functional communication and management of third party partners.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width: 30%;">
+            <div id="swiper_data">
+              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fd_Arc%E2%80%99teryx.svg" alt="">
+              <p style="margin-right: 4em;">
+                Production and design along with install oversight and execution support for the SoHo store opening on Broadway St, New York. Also working on creative and production work for a new store opening in Glendale, California.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width: 30%;"><div id="swiper_data">
+            <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fe_Hunter.svg" alt="">
+              <p style="margin-right: 4em;">
+                Design and Production partner for Hunter Holiday 2022 Pop-in at Nordstrom 57th St, New York, including activations in Women’s, Men’s and Kid’s zones. Thirty-five (35) additional smaller take-downs in Nordstrom stores across the US. Concept design for Holiday boot customization events in stores across winter 2022.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width: 30%;">
+            <div id="swiper_data">
+              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1601_MediaLink.svg" alt="">
+              <p style="margin-right: 4em;">
+                Retained Production support across retail and events in NY, CHI, LA. Creative Design, Design Management, Production/Project Management, and execution of work from concept to installation across the Country.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width: 30%;">
+            <div id="swiper_data">
+              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fe_Hunter.svg" alt="">
+              <p style="margin-right: 4em;">
+                Creative, Design, and Production Partner for 2023 CES. Scope Included creation of Branding Identity, Assets, and Digital Content, Design, Production design, Production oversight and Installation of client activations for IBM, Delta, Instacart, and more.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide" style="width: 30%;">
+            <div id="swiper_data">
+              <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1602_AfterPay.svg" alt="">
+              <p style="margin-right: 4em;">
+                Creative, Design, and Production Partner for 2022 NY Fashion Week Pop-Up space. In Partnership with B-Reel scope including creation of Final Design, Design Assets, 3D Renders, Production design, Production/Partner oversight and creation of a two (2) story pop-up for Afterpay’s clients such as Crocs, JD Sports, Container Store, &amp; Revolve.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <div id="page5">
@@ -216,9 +284,9 @@
         Sundown
       </h1>
     </div>
-    <div id="footerlower">      
+    <div id="footerlower">
       <div>
-          <h5>Copyright © Sundown Studio</h5>
+        <h5>Copyright © Sundown Studio</h5>
       </div>
       <div>
         <h5>Brooklyn, NY</h5>
@@ -229,7 +297,7 @@
       <div>
         <h5>LinkedIn</h5>
       </div>
-  </div>
+    </div>
   </div>
 
 
@@ -242,6 +310,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
     integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Imported swipperjs -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     //Used Locomotive.js for smooth scrolling
     const scroll = new LocomotiveScroll({
@@ -268,6 +338,7 @@
 
     elems.forEach(function (e) {
       e.addEventListener("mouseenter", function () {
+        console.log(e)
         var image_src = e.getAttribute("data-image");
         fixed_image.style.backgroundImage = `url(${image_src})`;
       });
@@ -332,7 +403,35 @@
       text.querySelector('p').innerText = `We’re with you every step of the way, from the project initiation to launch day. Our production and design teams are onsite to direct and guide the process down to the last point of completion, ensuring success across the built space and experience.`;
     });
 
+    // Initialize swiper
+    function swiperAnimation(){
+      var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 100
+    });
+    }
 
+    swiperAnimation();
+
+    var swiper = document.querySelector(".swiper");
+
+    swiper.addEventListener("mousemove", function(e) {
+    const cursor = document.querySelector(".click-effect");
+    cursor.style.display = "block"
+    cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
+    cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
+
+    // Apply animation every time the mouse moves
+    // cursor.style.animation = 'none';
+    // cursor.offsetHeight; // Trigger reflow to reset the animation
+    // cursor.style.animation = 'cursorAnimation 0.4s forwards';
+
+    // To restart the animation when clicking
+    // cursor.addEventListener("animationend", () => {
+    //   cursor.classList.remove("active");
+    // });
+    });
 
   </script>
 
