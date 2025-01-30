@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Skills Effect 1</title>
+    <link rel="shortcut icon" href="../../../Users/yash vaidya/javascript-projects/sample-website-1/favicon.ico"
+        type="image/x-icon">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="main">
+        <div class="section1">
+            <h1>Created by Saumya Singh</h1>
+            <h4>Inspired by 13322566869.com/</h4>
+            <h6>Used HTML, CSS, Javascript, Lenis.js (for smooth scrolling), GSAP & Scroll Trigger</h6>
+        </div>
+        <div class="main-section">
+            <div class="skills">
+                <h2 id="angular">Angular</h2>
+                <h2 id="html">HTML</h2>
+                <h2 id="css">CSS</h2>
+                <h2 id="restful">RestFul API</h2>
+                <h2 id="javascript">Javascript</h2>
+                <h2 id="typescript">Typescript</h2>
+                <h2 id="animation">Animation</h2>
+                <h2 id="figma">Figma</h2>
+                <h2 id="agile">Agile Methodologies</h2>
+                <h2 id="logo">Logo & Branding</h2>
+                <h2 id="social">Social Media Marketing</h2>
+                <h2 id="portfolio">Portfolio Creation</h2>
+                <h2 id="figma">Figma</h2>
+                <h2 id="seo">SEO</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+
+        // Listen for the scroll event and log the event data
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        });
+
+        // ---------------------------------------------------------
+
+        let tl = gsap.timeline({
+            //scrolltrigger plugin
+            scrollTrigger: {
+                trigger: '.main-section',
+                pin: true, // pin the trigger element while active
+                start: '50% 50%', // first value is of trigger, second value is wrt screen
+                end: '200% 50%', // first value is of trigger, second value is wrt screen
+                scrub: 1 // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+            }
+        });
+
+        tl
+        .to("#agile",{
+            opacity: 1,
+            filter: "blur(0px)"
+        })
+        .to("#angular",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#javascript",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#logo",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#portfolio",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#animation",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#html",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#seo",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#figma",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#social",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#typescript",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#css",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+        .to("#restful",{
+            opacity: 1,
+            filter: "blur(0px)",
+            delay: -0.3
+        })
+    </script>
+</body>
+
+</html>
