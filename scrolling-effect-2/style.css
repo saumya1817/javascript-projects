@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+#container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding: 0vw 10vw 0vw 20vw;
+}
+/* #overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    background-image: linear-gradient(rgb(19, 19, 19), rgba(255, 255, 0, 0), rgb(19, 19, 19));
+} */
+#textarea{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    z-index: 9;
+    p{
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        padding-bottom: 0.3em;
+        display: flex;
+        flex-direction: row;
+    }
+    h2{
+        font-weight: 100;
+        font-size: 2.5vh;
+        padding-top: 2em;
+        padding-bottom: 1em;
+    }
+    h3{
+        font-weight: 100;
+    }
+}
+#textarea h1{
+    overflow: hidden;
+    font-family: ivymode;
+    font-size: 6vw;
+    color: rgb(212, 212, 212);
+}
+#textarea a:hover{
+    gap: 1vw;
+}
+#lineone{
+    width: 20%;
+    height: 100vh;
+    overflow: hidden;
+}
+#innerline1{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 100%;
+    height: 200vh;
+}
+#innerline2{
+    margin-top: -100vh;
+}
+.cards{
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+#innerline1 .cards:nth-child(1){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-1.jpg);
+}
+
+#innerline1 .cards:nth-child(2){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-2.jpg);
+}
+
+#innerline1 .cards:nth-child(3){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-3.jpg);
+}
+
+#innerline1 .cards:nth-child(4){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-4.jpg);
+}
+
+#innerline1 .cards:nth-child(5){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-5.jpg);
+}
+#innerline2 .cards:nth-child(1){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-6.jpg);
+}
+
+#innerline2 .cards:nth-child(2){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-7.jpg);
+}
+
+#innerline2 .cards:nth-child(3){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-8.jpg);
+}
+
+#innerline2 .cards:nth-child(4){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-9.jpg);
+}
+
+#innerline2 .cards:nth-child(5){
+    background-image: url(https://www.cinecasero.uy/img/hmd/hmd-10.jpg);
+}
+.c-noise{
+    background-image: url(https://www.cinecasero.uy/img/noise-full.png);
+    height: 300%;
+    left: -50%;
+    opacity: 0.06;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: 100;
+    pointer-events: none;
+}
+.c-old {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://www.cinecasero.uy/img/old.webp);
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    z-index: 150;
+    pointer-events: none;
+}
