@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Scrolling Effect 3</title>
+    <link rel="shortcut icon" href="../../../Users/yash vaidya/javascript-projects/sample-website-1/favicon.ico"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div id="main">
+        <div class="nav">
+            <a href="/">( MENU )</a>
+            <a id="our" href="/">OUR REVOLUTION</a>
+            <a href="/">( WORK* )</a>
+        </div>
+            <div class="content">
+                <div class="dots-div">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <h1>
+                    <span>Till now, energy drinks have been like</span> <br />
+                    <span>a bad cologne, overwhelming and</span> <br />
+                    <span>hard to get away from. Time for a</span> <br />
+                    <span>change. Time to remove bad energy.</span>
+                </h1>
+                <div class="dots-div">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        <div class="img-div">
+            <div class="img"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var tl = gsap.timeline({scrollTrigger:{
+            trigger: "#main",
+            // markers: true,
+            start: "75% 50%",
+            end: "100% 50%",
+            scrub: 5,
+            duration: 1,
+            pin: true
+        }});
+        tl
+        .to(".img", {
+            width: "100vw",
+            height: "100vh"
+        })
+    </script>
+</body>
+
+</html>

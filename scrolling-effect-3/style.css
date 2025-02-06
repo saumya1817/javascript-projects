@@ -1,0 +1,118 @@
+@font-face {
+    font-family: fontone;
+    src: url(Fonts/PPMigra-Regular.fb0ee287.otf);
+}
+
+@font-face {
+    font-family: fontthree;
+    src: url(Fonts/TTCommons-Regular.7ec989a7.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #DAEEFB;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 2em 0 2em;
+
+    #our{
+        font-size: 2vw;
+        font-family: fontone;
+    }
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-family: fontthree;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15vh;
+    width: 100%;
+    height: 90vh;
+    padding: 0vw 15vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+
+    h1{
+        text-align: center;
+        font-weight: 200;
+        font-family: fontone;
+        
+        span{
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 1s ease-out forwards;
+        }
+    }
+}
+.dots-div{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dot{
+        height: 1vh;
+        width: 1vh;
+        border-radius: 50%;
+        background-color: black;
+    }
+}
+.img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.img{
+    width: 25vw;
+    height: 50vh;
+    background-image: url(https://cdn.sanity.io/images/60a2bs0u/production/766deb96495612e023c032afeee001063af9026e-2880x1760.png?w=1920&q=100&fit=clip&auto=format);
+    background-size: cover;
+    background-position: center;
+}
+/* Staggered animation delays */
+h1 span:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-of-type(2) {
+    animation-delay: 1s;
+}
+
+h1 span:nth-of-type(3) {
+    animation-delay: 1.5s;
+}
+
+h1 span:nth-of-type(4) {
+    animation-delay: 2s;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
